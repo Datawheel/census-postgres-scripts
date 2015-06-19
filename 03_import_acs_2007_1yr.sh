@@ -3,7 +3,7 @@
 # Clone the import scripts from git
 cd /acs
 sudo apt-get -y install git
-git clone git://github.com/censusreporter/census-postgres.git
+git clone https://github.com/Datawheel/census-postgres.git
 
 # Create the schema
 cd /acs/census-postgres/acs2007_1yr

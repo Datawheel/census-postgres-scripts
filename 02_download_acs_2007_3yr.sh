@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # Make a data directory in ephemeral stoage
-sudo mkdir -p /mnt/tmp
-sudo chown ubuntu /mnt/tmp
+sudo mkdir -p /acs/tmp
+sudo chown hermes /acs/tmp
 
 # Grab the 2008 ACS 3 year
-cd /mnt/tmp
+cd /acs/tmp
 mkdir -p acs2007_3yr
 cd acs2007_3yr
 sudo apt-get -y install aria2 unzip
-aria2c --dir=/mnt/tmp/acs2007_3yr --max-connection-per-server=5 --force-sequential=true \
+aria2c --dir=/acs/tmp/acs2007_3yr --max-connection-per-server=5 --force-sequential=true \
     "http://www2.census.gov/acs2007_3yr/summaryfile/Alabama/all_al.zip" \
     "http://www2.census.gov/acs2007_3yr/summaryfile/Alabama/g20073al.txt" \
     "http://www2.census.gov/acs2007_3yr/summaryfile/Alaska/all_ak.zip" \
@@ -228,11 +228,11 @@ for i in prt03/test/ftp/sumfile/**/20073*.zip; do unzip -qn $i; done
 # The lookup tables are in XLS only, so they'll be provided in the census-postgres
 # package later.
 
-for i in /mnt/tmp/acs2007_3yr/tab4/sumfile/prod/2005thru2007/data/e20073*0141000.txt; do
-    python /home/ubuntu/census-postgres/meta-scripts/fix_csv.py --columns 43 $i $i.fixed.txt
+for i in /acs/tmp/acs2007_3yr/tab4/sumfile/prod/2005thru2007/data/e20073*0141000.txt; do
+    python /acs/census-postgres/meta-scripts/fix_csv.py --columns 43 $i $i.fixed.txt
     mv $i.fixed.txt $i
 done
-for i in /mnt/tmp/acs2007_3yr/tab4/sumfile/prod/2005thru2007/data/m20073*0141000.txt; do
-    python /home/ubuntu/census-postgres/meta-scripts/fix_csv.py --columns 43 $i $i.fixed.txt
+for i in /acs/tmp/acs2007_3yr/tab4/sumfile/prod/2005thru2007/data/m20073*0141000.txt; do
+    python /acs/census-postgres/meta-scripts/fix_csv.py --columns 43 $i $i.fixed.txt
     mv $i.fixed.txt $i
 done

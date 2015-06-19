@@ -1,15 +1,15 @@
 #!/bin/bash
 
 # Make a data directory in ephemeral stoage
-sudo mkdir -p /mnt/tmp
-sudo chown ubuntu /mnt/tmp
+sudo mkdir -p /acs/tmp
+sudo chown hermes /acs/tmp
 
 # Grab the 2008 ACS 3 year
-cd /mnt/tmp
+cd /acs/tmp
 mkdir -p acs2008_3yr
 cd acs2008_3yr
 sudo apt-get -y install aria2 unzip
-aria2c --dir=/mnt/tmp/acs2008_3yr --max-connection-per-server=5 \
+aria2c --dir=/acs/tmp/acs2008_3yr --max-connection-per-server=5 \
     "http://www2.census.gov/acs2008_3yr/summaryfile/all_ACSSF.zip"
 unzip -q all_ACSSF.zip
 

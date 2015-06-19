@@ -1,5 +1,5 @@
 #!/bin/bash
-cd /mnt/tmp/tiger2013
+cd /acs/tmp/tiger2013
 for i in **/*.zip
 do
     unzip -q -n $i -d `dirname $i`

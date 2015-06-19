@@ -1,12 +1,12 @@
 #!/bin/bash
 
 # Clone the import scripts from git
-cd /home/ubuntu
+cd /acs
 sudo apt-get -y install git
 git clone git://github.com/censusreporter/census-postgres.git
 
 # Create the schema
-cd /home/ubuntu/census-postgres/acs2011_1yr
+cd /acs/census-postgres/acs2011_1yr
 psql -d census -h localhost -U census -c "DROP SCHEMA IF EXISTS acs2011_1yr CASCADE; CREATE SCHEMA acs2011_1yr;"
 
 # Create import tables

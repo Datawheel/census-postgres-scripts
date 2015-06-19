@@ -67,8 +67,8 @@ Create a user and database for census data.
 
 Make login passwordless.
 
-    echo "localhost:5432:census:census:censuspassword" > /home/ubuntu/.pgpass
-    chmod 0600 /home/ubuntu/.pgpass
+    echo "localhost:5432:census:census:censuspassword" > /acs/.pgpass
+    chmod 0600 /acs/.pgpass
 
 After this you should be able to connect to your empty PostgreSQL database:
 
@@ -78,10 +78,10 @@ After this you should be able to connect to your empty PostgreSQL database:
 
 Downloads the raw data from the Census Bureau to prepare for insert into the database you just created. We'll use [aria2](http://aria2.sourceforge.net/manual/en/html/aria2c.html) to help us download these files as quickly as possible.
 
-    sudo mkdir -p /mnt/tmp
-    sudo chown ubuntu /mnt/tmp
+    sudo mkdir -p /acs/tmp
+    sudo chown hermes /acs/tmp
     sudo apt-get install -y aria2 git
-    cd /home/ubuntu
+    cd /acs
     git clone https://github.com/censusreporter/census-postgres-scripts.git
     git clone https://github.com/censusreporter/census-postgres.git
     cd census-postgres-scripts
@@ -105,7 +105,7 @@ With this stuff set up we can use the scripts I wrote to download the data from 
     ./02_download_acs_2012_3yr.sh
     ./02_download_acs_2012_5yr.sh
 
-An hour or two and 279GB later you should have a directory at `/mnt/tmp` full of raw, expanded Census Bureau ACS data.
+An hour or two and 279GB later you should have a directory at `/acs/tmp` full of raw, expanded Census Bureau ACS data.
 
 ### Importing ACS Data
 
@@ -132,7 +132,7 @@ Once we have the ACS data downloaded it's time to actually load that data in to 
 
 We just imported the estimate/error values for the ACS data. We also rely on tables that describe what the various Census tables and columns mean and how they relate to each other. We'll load that information here.
 
-    cd /home/ubuntu
+    cd /acs
     git clone https://github.com/censusreporter/census-table-metadata.git
     cd census-table-metadata
     psql -U census -d census -h localhost -f census_metadata.sql
@@ -142,7 +142,7 @@ We just imported the estimate/error values for the ACS data. We also rely on tab
 
 The geodata part of our APIs comes from the Census Bureau's TIGER 2012 dataset. Let's download and import it.
 
-    cd /home/ubuntu/census-postgres-scripts
+    cd /acs/census-postgres-scripts
     ./11_set_up_postgis.sh
     ./12_download_tiger_2012.sh
     ./13_import_tiger_2012.sh

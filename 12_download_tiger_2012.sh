@@ -1,10 +1,10 @@
 # Download census-y TIGER data
 
-mkdir -p /mnt/tmp/tiger2012
+mkdir -p /acs/tmp/tiger2012
 
 wget --recursive --continue --accept=*.zip \
      --no-parent --cut-dirs=3 --no-host-directories \
-     --directory-prefix=/mnt/tmp/tiger2012 \
+     --directory-prefix=/acs/tmp/tiger2012 \
     ftp://ftp2.census.gov/geo/tiger/TIGER2012/COUNTY/ \
     ftp://ftp2.census.gov/geo/tiger/TIGER2012/STATE/ \
     ftp://ftp2.census.gov/geo/tiger/TIGER2012/CBSA/ \

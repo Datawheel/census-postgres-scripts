@@ -9,7 +9,7 @@ cd /acs/tmp
 mkdir -p acs2007_1yr
 cd acs2007_1yr
 sudo apt-get -y install aria2 unzip
-aria2c --dir=/mnt/tmp/acs2007_1yr --max-connection-per-server=5 --force-sequential=true \
+aria2c --dir=/acs/tmp/acs2007_1yr --max-connection-per-server=5 --force-sequential=true \
     "http://www2.census.gov/acs2007_1yr/summaryfile/Alabama/all_al.zip" \
     "http://www2.census.gov/acs2007_1yr/summaryfile/Alabama/g20071al.txt" \
     "http://www2.census.gov/acs2007_1yr/summaryfile/Alaska/all_ak.zip" \

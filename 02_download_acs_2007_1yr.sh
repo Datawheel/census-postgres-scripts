@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # Make a data directory in ephemeral stoage
-sudo mkdir -p /mnt/tmp
-sudo chown ubuntu /mnt/tmp
+sudo mkdir -p /acs/tmp
+sudo chown hermes /acs/tmp
 
 # Grab the 2007 ACS 1 year
-cd /mnt/tmp
+cd /acs/tmp
 mkdir -p acs2007_1yr
 cd acs2007_1yr
 sudo apt-get -y install aria2 unzip
@@ -229,19 +229,19 @@ for i in prt03/sumfile/**/20071*.zip; do unzip -qn $i; done
 # package later.
 
 # Some sequences have "ragged ends"/broken CSV column counts, so fix those:
-for i in /mnt/tmp/acs2007_1yr/tab4/sumfile/prod/2007/data/e20071*0043000.txt; do
-    python /home/ubuntu/census-postgres/meta-scripts/fix_csv.py $i $i.fixed.txt
+for i in /acs/tmp/acs2007_1yr/tab4/sumfile/prod/2007/data/e20071*0043000.txt; do
+    python /acs/census-postgres/meta-scripts/fix_csv.py $i $i.fixed.txt
     mv $i.fixed.txt $i
 done
-for i in /mnt/tmp/acs2007_1yr/tab4/sumfile/prod/2007/data/m20071*0043000.txt; do
-    python /home/ubuntu/census-postgres/meta-scripts/fix_csv.py $i $i.fixed.txt
+for i in /acs/tmp/acs2007_1yr/tab4/sumfile/prod/2007/data/m20071*0043000.txt; do
+    python /acs/census-postgres/meta-scripts/fix_csv.py $i $i.fixed.txt
     mv $i.fixed.txt $i
 done
-for i in /mnt/tmp/acs2007_1yr/tab4/sumfile/prod/2007/data/e20071*0141000.txt; do
-    python /home/ubuntu/census-postgres/meta-scripts/fix_csv.py --columns 44 $i $i.fixed.txt
+for i in /acs/tmp/acs2007_1yr/tab4/sumfile/prod/2007/data/e20071*0141000.txt; do
+    python /acs/census-postgres/meta-scripts/fix_csv.py --columns 44 $i $i.fixed.txt
     mv $i.fixed.txt $i
 done
-for i in /mnt/tmp/acs2007_1yr/tab4/sumfile/prod/2007/data/m20071*0141000.txt; do
-    python /home/ubuntu/census-postgres/meta-scripts/fix_csv.py --columns 44 $i $i.fixed.txt
+for i in /acs/tmp/acs2007_1yr/tab4/sumfile/prod/2007/data/m20071*0141000.txt; do
+    python /acs/census-postgres/meta-scripts/fix_csv.py --columns 44 $i $i.fixed.txt
     mv $i.fixed.txt $i
 done

@@ -62,7 +62,7 @@ aria2c --dir=/acs/tmp/acs2008_1yr --max-connection-per-server=5 --force-sequenti
     "http://www2.census.gov/acs2008_1yr/summaryfile/Washington/all_wa.zip" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/WestVirginia/all_wv.zip" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Wisconsin/all_wi.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Wyoming/all_wy.zip" \
+    "http://www2.census.gov/acs2008_1yr/summaryfile/Wyoming/all_wy.zip" 
 unzip -q all_al.zip
 rm all_al.zip
 unzip -q all_ak.zip

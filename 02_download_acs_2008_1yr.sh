@@ -11,111 +11,58 @@ cd acs2008_1yr
 sudo apt-get -y install aria2 unzip
 aria2c --dir=/acs/tmp/acs2008_1yr --max-connection-per-server=5 --force-sequential=true \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Alabama/all_al.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Alabama/g20081al.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Alaska/all_ak.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Alaska/g20081ak.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Arizona/all_az.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Arizona/g20081az.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Arkansas/all_ar.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Arkansas/g20081ar.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/California/all_ca.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/California/g20081ca.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Colorado/all_co.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Colorado/g20081co.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Connecticut/all_ct.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Connecticut/g20081ct.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Delaware/all_de.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Delaware/g20081de.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/DistrictofColumbia/all_dc.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/DistrictofColumbia/g20081dc.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Florida/all_fl.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Florida/g20081fl.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Georgia/all_ga.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Georgia/g20081ga.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Hawaii/all_hi.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Hawaii/g20081hi.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Idaho/all_id.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Idaho/g20081id.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Illinois/all_il.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Illinois/g20081il.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Indiana/all_in.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Indiana/g20081in.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Iowa/all_ia.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Iowa/g20081ia.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Kansas/all_ks.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Kansas/g20081ks.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Kentucky/all_ky.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Kentucky/g20081ky.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Louisiana/all_la.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Louisiana/g20081la.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Maine/all_me.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Maine/g20081me.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Maryland/all_md.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Maryland/g20081md.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Massachusetts/all_ma.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Massachusetts/g20081ma.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Michigan/all_mi.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Michigan/g20081mi.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Minnesota/all_mn.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Minnesota/g20081mn.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Mississippi/all_ms.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Mississippi/g20081ms.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Missouri/all_mo.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Missouri/g20081mo.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Montana/all_mt.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Montana/g20081mt.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Nebraska/all_ne.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Nebraska/g20081ne.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Nevada/all_nv.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Nevada/g20081nv.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/NewHampshire/all_nh.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/NewHampshire/g20081nh.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/NewJersey/all_nj.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/NewJersey/g20081nj.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/NewMexico/all_nm.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/NewMexico/g20081nm.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/NewYork/all_ny.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/NewYork/g20081ny.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/NorthCarolina/all_nc.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/NorthCarolina/g20081nc.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/NorthDakota/all_nd.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/NorthDakota/g20081nd.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Ohio/all_oh.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Ohio/g20081oh.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Oklahoma/all_ok.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Oklahoma/g20081ok.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Oregon/all_or.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Oregon/g20081or.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Pennsylvania/all_pa.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Pennsylvania/g20081pa.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/PuertoRico/all_pr.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/PuertoRico/g20081pr.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/RhodeIsland/all_ri.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/RhodeIsland/g20081ri.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/SouthCarolina/all_sc.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/SouthCarolina/g20081sc.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/SouthDakota/all_sd.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/SouthDakota/g20081sd.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Tennessee/all_tn.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Tennessee/g20081tn.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Texas/all_tx.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Texas/g20081tx.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/UnitedStates/all_us.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/UnitedStates/g20081us.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Utah/all_ut.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Utah/g20081ut.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Vermont/all_vt.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Vermont/g20081vt.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Virginia/all_va.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Virginia/g20081va.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Washington/all_wa.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Washington/g20081wa.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/WestVirginia/all_wv.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/WestVirginia/g20081wv.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Wisconsin/all_wi.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Wisconsin/g20081wi.txt" \
     "http://www2.census.gov/acs2008_1yr/summaryfile/Wyoming/all_wy.zip" \
-    "http://www2.census.gov/acs2008_1yr/summaryfile/Wyoming/g20081wy.txt"
 unzip -q all_al.zip
 rm all_al.zip
 unzip -q all_ak.zip
@@ -223,25 +170,3 @@ rm all_wi.zip
 unzip -q all_wy.zip
 rm all_wy.zip
 
-for i in prt03/sumfile/**/20081*.zip; do unzip -qn $i; done
-
-# The lookup tables are in XLS only, so they'll be provided in the census-postgres
-# package later.
-
-# Some sequences have "ragged ends"/broken CSV column counts, so fix those:
-for i in /acs/tmp/acs2008_1yr/tab4/sumfile/prod/2008/data/e20081*0043000.txt; do
-    python /acs/census-postgres/meta-scripts/fix_csv.py $i $i.fixed.txt
-    mv $i.fixed.txt $i
-done
-for i in /acs/tmp/acs2008_1yr/tab4/sumfile/prod/2008/data/m20081*0043000.txt; do
-    python /acs/census-postgres/meta-scripts/fix_csv.py $i $i.fixed.txt
-    mv $i.fixed.txt $i
-done
-for i in /acs/tmp/acs2008_1yr/tab4/sumfile/prod/2008/data/e20081*0141000.txt; do
-    python /acs/census-postgres/meta-scripts/fix_csv.py --columns 44 $i $i.fixed.txt
-    mv $i.fixed.txt $i
-done
-for i in /acs/tmp/acs2008_1yr/tab4/sumfile/prod/2008/data/m20081*0141000.txt; do
-    python /acs/census-postgres/meta-scripts/fix_csv.py --columns 44 $i $i.fixed.txt
-    mv $i.fixed.txt $i
-done

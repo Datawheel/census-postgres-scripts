@@ -170,3 +170,4 @@ rm all_wi.zip
 unzip -q all_wy.zip
 rm all_wy.zip
 
+for i in 20081*.zip; do unzip -qn $i; done
